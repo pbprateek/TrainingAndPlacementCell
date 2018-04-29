@@ -18,6 +18,7 @@ public class StudentInfo {
         public static final String YEAR12 = "year12";
         public static final String YEARBTECH = "yearbtech";
         public static final String PLACED="placed";
+        public static final String IMAGE="image";
         public static final String _ID = "_id";
 
     }

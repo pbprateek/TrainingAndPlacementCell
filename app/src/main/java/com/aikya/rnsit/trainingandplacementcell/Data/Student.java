@@ -14,6 +14,16 @@ public class Student {
     private String year10;
     private String year12;
     private String yearbtech;
+    private String image;
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
     private int placed;
 
     public Student() {

@@ -28,6 +28,7 @@ public class StudentsDbHelper extends SQLiteOpenHelper {
                 "\t`contact`\tTEXT NOT NULL,\n" +
                 "\t`branch`\tTEXT NOT NULL,\n" +
                 "\t`marks10`\tTEXT DEFAULT 0,\n" +
+                "\t`image`\tTEXT DEFAULT 0,\n" +
                 "\t`marks12`\tTEXT DEFAULT 0,\n" +
                 "\t`marksbtech`\tTEXT DEFAULT 0,\n" +
                 "\t`year10`\tTEXT DEFAULT 0,\n" +
@@ -75,6 +76,7 @@ public class StudentsDbHelper extends SQLiteOpenHelper {
                 student.setYear12(cursor.getString(cursor.getColumnIndex(StudentInfo.StudentsEntry.YEAR12)));
                 student.setYearbtech(cursor.getString(cursor.getColumnIndex(StudentInfo.StudentsEntry.YEARBTECH)));
                 student.setPlaced(cursor.getInt(cursor.getColumnIndex(StudentInfo.StudentsEntry.PLACED)));
+                student.setImage(cursor.getString(cursor.getColumnIndex(StudentInfo.StudentsEntry.IMAGE)));
                 allStudents.add(student);
 
 
@@ -131,6 +133,7 @@ public class StudentsDbHelper extends SQLiteOpenHelper {
             student.setYear12(cursor.getString(cursor.getColumnIndex(StudentInfo.StudentsEntry.YEAR12)));
             student.setYearbtech(cursor.getString(cursor.getColumnIndex(StudentInfo.StudentsEntry.YEARBTECH)));
             student.setPlaced(cursor.getInt(cursor.getColumnIndex(StudentInfo.StudentsEntry.PLACED)));
+            student.setImage(cursor.getString(cursor.getColumnIndex(StudentInfo.StudentsEntry.IMAGE)));
         }
 
 
@@ -164,6 +167,7 @@ public class StudentsDbHelper extends SQLiteOpenHelper {
             student.setYear12(cursor.getString(cursor.getColumnIndex(StudentInfo.StudentsEntry.YEAR12)));
             student.setYearbtech(cursor.getString(cursor.getColumnIndex(StudentInfo.StudentsEntry.YEARBTECH)));
             student.setPlaced(cursor.getInt(cursor.getColumnIndex(StudentInfo.StudentsEntry.PLACED)));
+            student.setImage(cursor.getString(cursor.getColumnIndex(StudentInfo.StudentsEntry.IMAGE)));
         }
         return student;
     }
