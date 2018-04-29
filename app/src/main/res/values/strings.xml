@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Training And Placement Cell</string>
+    <string-array name="branch_array">
+        <item>CSE</item>
+        <item>ISE</item>
+        <item>EEE</item>
+        <item>EC</item>
+        <item>MECH</item>
+        <item>CIV</item>
+    </string-array>
+
+
+</resources>
