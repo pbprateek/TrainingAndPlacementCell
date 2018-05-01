@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private Button acadProfile;
     private Button allStud;
     private Button placedStud;
+    private Button upcomingCompanies;
 
 
     @Override
@@ -37,46 +38,34 @@ public class MainActivity extends AppCompatActivity {
         acadProfile=findViewById(R.id.acad_profile);
         allStud=findViewById(R.id.all_stud);
         placedStud=findViewById(R.id.placed_stud);
-        myProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this, MyProfile.class);
-                startActivity(intent);
-            }
-        });
-        acadProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this, AcademicProfile.class);
-                startActivity(intent);
-            }
-        });
-        allStud.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this, AllStudentsActivity.class);
-                startActivity(intent);
+        upcomingCompanies=findViewById(R.id.upcomingcompanies);
+        upcomingCompanies.setOnClickListener(v -> {
+            Intent intent=new Intent(MainActivity.this, UpcomingCompaniesActivity.class);
+            startActivity(intent);
 
-            }
+        });
+        myProfile.setOnClickListener(v -> {
+            Intent intent=new Intent(MainActivity.this, MyProfile.class);
+            startActivity(intent);
+        });
+        acadProfile.setOnClickListener(v -> {
+            Intent intent=new Intent(MainActivity.this, AcademicProfile.class);
+            startActivity(intent);
+        });
+        allStud.setOnClickListener(v -> {
+            Intent intent=new Intent(MainActivity.this, AllStudentsActivity.class);
+            startActivity(intent);
+
         });
 
-        placedStud.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this, PlacedStudentsActivity.class);
-                startActivity(intent);
+        placedStud.setOnClickListener(v -> {
+            Intent intent=new Intent(MainActivity.this, PlacedStudentsActivity.class);
+            startActivity(intent);
 
-            }
         });
 
 
-        logOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                logOut();
-
-            }
-        });
+        logOut.setOnClickListener(v -> logOut());
 
 
     }
